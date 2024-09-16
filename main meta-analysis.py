@@ -29,7 +29,7 @@ excluded_sections = [
 ]
 
 # Specify the folder containing PDF files
-corpus_folder = "/Volumes/WallyWest/Corpus2"
+corpus_folder = 
 
 # Prepare lists to store the results for each document
 results = []
@@ -75,7 +75,7 @@ for filename in os.listdir(corpus_folder):
             # Collect results for the entire document
             result = {
                 "Document Title": document_title,
-                "Algorithmic Trigger Count": total_trigger_count
+                "Trigger Count": total_trigger_count
             }
             # Adding sentence data per term
             for term in algorithmic_trigger_terms:
@@ -90,6 +90,6 @@ for filename in os.listdir(corpus_folder):
 df = pd.DataFrame(results)
 
 # Export to Excel
-output_path = os.path.join("/Volumes/WallyWest/Corpus_Analysis2.xlsx")
+output_path = os.path.join( )
 df.to_excel(output_path, index=False)
 os.system(f"open {output_path}")
